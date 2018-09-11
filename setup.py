@@ -73,8 +73,6 @@ else:
 # We need pyasn1.
 # Well, actually python-ldap/pyldap require pyasn1, but it's an optional
 # dependency for them, as it is only used with syncrepl.  So, we require it!
-# NOTE: We can't use the newest versions.
-# See https://github.com/akkornel/syncrepl/issues/18
 install_requirements.append('pyasn1>=0.2.2')
 
 
