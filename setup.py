@@ -75,7 +75,7 @@ else:
 # dependency for them, as it is only used with syncrepl.  So, we require it!
 # NOTE: We can't use the newest versions.
 # See https://github.com/akkornel/syncrepl/issues/18
-install_requirements.append('pyasn1<0.3.1,>=0.2.2')
+install_requirements.append('pyasn1>=0.2.2')
 
 
 # Have code pull the version number from _version.py
