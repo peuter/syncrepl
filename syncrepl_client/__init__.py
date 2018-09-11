@@ -391,7 +391,7 @@ class Syncrepl(SyncreplConsumer, SimpleLDAPObject):
                 (current_url.scope != new_url.scope) or
                 (current_url.filterstr != new_url.filterstr)
                ):
-                raise exceptions.LDAPUrlConflict(current_url, newurl)
+                raise exceptions.LDAPUrlConflict(current_url, new_url)
 
             # We allow changes to other attributes (like host, who, and cred)
             # even though they may cause weird search result changes (for
@@ -1071,7 +1071,7 @@ class Syncrepl(SyncreplConsumer, SimpleLDAPObject):
                 self.callback.record_rename(self.__uuid_dn_map[uuid], dn)
 
                 # Now delete the old DN-UUID map entry, and update both maps.
-                del self.__dn_uuid_map[__uuid_dn_map[uuid]]
+                del self.__dn_uuid_map[self.__uuid_dn_map[uuid]]
                 self.__dn_uuid_map[dn] = uuid
                 self.__uuid_dn_map[uuid] = dn
 
