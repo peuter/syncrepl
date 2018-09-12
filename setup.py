@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # vim: sw=4 ts=4 et
 
@@ -89,7 +89,7 @@ def version():
 
 # Have code pull the long description from our README
 def readme():
-    with open('README.rst') as file:
+    with open('README.rst', encoding='utf-8') as file:
         return file.read()
 
 
